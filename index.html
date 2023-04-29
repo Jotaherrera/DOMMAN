@@ -5,9 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOMMAN</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/styles/style.css" />
   </head>
   <body>
-    <script src="main.js"></script>
+    <main>
+      <div class="words">
+        <p>Hola</p>
+      </div>
+
+      <div class="controls">
+        <div class="slider">
+          <input
+            class="slider-input"
+            type="range"
+            min="1"
+            max="10"
+            value="5"
+            id="wordsSpeed"
+          />
+        </div>
+
+        <div class="buttons">
+          <button>
+            <span class="pause-icon"></span>
+          </button>
+          <button>
+            <span class="stop-icon"></span>
+          </button>
+          <button>
+            <span class="play-icon"></span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./src/main.js"></script>
   </body>
 </html>
