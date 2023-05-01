@@ -81,6 +81,7 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: filter 0.2s ease-in-out;
 }
 .buttons-container .pause-icon {
   background-image: url('../assets/icons/pause-icon.svg');
@@ -90,4 +91,9 @@ main {
 }
 .buttons-container .play-icon {
   background-image: url('../assets/icons/play-icon.svg');
+}
+.pause-icon:hover,
+.play-icon:hover,
+.stop-icon:hover {
+  filter: brightness(70%);
 }
