@@ -1,8 +1,8 @@
 const wordsDisplay = document.querySelector('#words-display');
 const sliderControl = document.querySelector('.slider-input');
-const pauseButton = document.querySelector('.pause-icon');
 const stopButton = document.querySelector('.stop-icon');
-const playButton = document.querySelector('.play-icon');
+const playButton = document.querySelector('.play-button');
+const playIcon = document.querySelector('#play');
 
 async function fetchData() {
   try {
@@ -15,50 +15,44 @@ async function fetchData() {
   }
 }
 
-const words = await fetchData();
-wordsDisplay.textContent = words[0];
-
-let lastIndex = 0;
-let isPaused = false;
-let isStopped = false;
-let isPlaying = false;
-
 function displayWord() {
-  if (isPaused) {
-    return;
+  if (!isPaused) {
+    playIcon.classList.remove('play-icon');
+    playIcon.classList.add('pause-icon');
+    wordsDisplay.textContent = words[currentIndex];
+    currentIndex = (currentIndex + 1) % words.length;
   }
-
-  isPlaying = true;
-  playButton.disabled = true;
-  wordsDisplay.textContent = words[lastIndex];
-  lastIndex = (lastIndex + 1) % words.length;
-
-  if (!isStopped) {
-    const sliderValue = sliderControl.value;
-    const displayDelay = 1000 / sliderValue;
-    setTimeout(displayWord, displayDelay);
-  }
+  const speed = 1000 / sliderControl.value;
+  timeoutCurrentValue = setTimeout(displayWord, speed);
 }
 
-pauseButton.addEventListener('click', () => {
-  isPlaying = false;
-  playButton.disabled = false;
-  isPaused = !isPaused;
+let isPlaying = false;
+let isPaused = false;
+let currentIndex = 0;
+let timeoutCurrentValue;
+const words = await fetchData();
+
+playButton.addEventListener('click', () => {
+  isPlaying = !isPlaying;
+  if (isPlaying) {
+    isPaused = false;
+    playIcon.classList.remove('play-icon');
+    playIcon.classList.add('pause-icon');
+    displayWord();
+  } else {
+    playIcon.classList.remove('pause-icon');
+    playIcon.classList.add('play-icon');
+    isPaused = true;
+    clearTimeout(timeoutCurrentValue);
+  }
 });
 
 stopButton.addEventListener('click', () => {
-  isPlaying = false;
   isPaused = true;
-  isStopped = true;
-  lastIndex = 0;
-  wordsDisplay.textContent = words[0];
-  playButton.disabled = false;
-});
-
-playButton.addEventListener('click', () => {
-  isPaused = false;
-  isStopped = false;
-  if (!isPlaying) {
-    displayWord();
-  }
+  isPlaying = false;
+  currentIndex = 0;
+  clearTimeout(timeoutCurrentValue);
+  wordsDisplay.textContent = words[currentIndex];
+  playIcon.classList.remove('pause-icon');
+  playIcon.classList.add('play-icon');
 });
