@@ -22,8 +22,8 @@ main {
 .controls-container {
   position: absolute;
   bottom: 60px;
-  width: 50%;
-  min-width: 730px;
+  width: 30%;
+  min-width: 600px;
   height: 90px;
   display: flex;
   align-items: center;
