@@ -15,7 +15,7 @@ If Node.js is installed, you will see the version number printed in the terminal
 ## Installation
 
 1. Clone the repository to your local machine:
-   `$ git clone <https://github.com/Jotaherrera/DOMMAN.git>`
+   `$ git clone https://github.com/Jotaherrera/DOMMAN.git`
 
 2. Navigate to the project directory:
    `$ cd DOMMAN`
