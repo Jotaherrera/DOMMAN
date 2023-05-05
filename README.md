@@ -23,7 +23,7 @@ If Node.js is installed, you will see the version number printed in the terminal
 3. Install the required npm packages:
    `$ npm install`
 
-This will install all the necessary packages and dependencies required to run the project.
+   This will install all the necessary packages and dependencies required to run the project.
 
 4. Start the project:
    `$ npm run start`
