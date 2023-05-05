@@ -28,4 +28,4 @@ If Node.js is installed, you will see the version number printed in the terminal
 4. Start the project:
    `$ npm run start`
 
-This will start the project on your local machine. You can now view it in your browser at <http://localhost:3000>.
+   This will start the project on your local machine. You can now view it in your browser at <http://localhost:3000>.
