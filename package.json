@@ -2,10 +2,11 @@
   "name": "domman",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/app.js"
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,11 @@
   },
   "homepage": "https://github.com/Jotaherrera/DOMMAN#readme",
   "dependencies": {
-    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^7.1.0",
-    "nodemon": "^2.0.22"
+    "mongoose": "^7.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "dotenv": "^16.0.3"
   }
 }
