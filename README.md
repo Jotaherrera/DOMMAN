@@ -51,4 +51,4 @@ The program has three controls that affect the way the words are displayed:
 
 3. **Stop button:** This control resets the display to the first word in the list.
 
-Additionally, if you add `/words` to the URL (`http://localhost:3000/words`), you will be able to view a portion of the data extracted from the MongoDB Atlas database. Please note that this API functionality currently does not provide the entire database data and field. In the future, it will be able to show all the content of the database. When the API is complete, it will be separated from the project to live independently and provide direct access to the data extracted from the database.
+Additionally, if you add `/words` to the URL (<http://localhost:3000/words>), you will be able to view a portion of the data extracted from the MongoDB Atlas database. Please note that this API functionality currently does not provide the entire database data and field. In the future, it will be able to show all the content of the database. When the API is complete, it will be separated from the project to live independently and provide direct access to the data extracted from the database.
