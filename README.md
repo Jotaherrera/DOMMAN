@@ -2,6 +2,17 @@
 
 ![Image of landing page](/public/assets/github/landing.png 'Landing Image')
 
+## Technologies
+
+The following technologies were used to develop this project:
+
+- [Node.js](https://nodejs.org/en/)
+- [Express.js](https://expressjs.com/)
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+- JavaScript
+- HTML
+- CSS
+
 ## Prerequisites
 
 Before using this project, make sure that you have installed Node.js on your local machine. You can download and install Node.js from the official website: <https://nodejs.org/en/download/>.
