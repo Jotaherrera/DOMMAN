@@ -24,5 +24,5 @@ mongoose
 
 // Server is listening
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`DOMMAN app listening on port http://localhost:${port}/`);
 });
