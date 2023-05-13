@@ -7,6 +7,10 @@ html {
   font-size: 62.5%;
   font-family: 'Inter', sans-serif;
 }
+body {
+  width: 100%;
+  max-width: 100%;
+}
 main {
   display: flex;
   flex-direction: column;
