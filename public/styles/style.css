@@ -27,7 +27,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   bottom: 15%;
   width: 100%;
 }
