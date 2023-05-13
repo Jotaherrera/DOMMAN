@@ -8,24 +8,38 @@ html {
   font-family: 'Inter', sans-serif;
 }
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   position: relative;
 }
 main {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
 }
 .words-container {
+  display: flex;
+  flex-direction: column;
   color: #ff0000;
   font-weight: 600;
   font-size: 11rem;
 }
 .controls-container {
-  position: absolute;
-  bottom: 10%;
-  width: 100%;
+  width: 90%;
   max-width: 600px;
   height: 90px;
   display: flex;
@@ -100,30 +114,56 @@ main {
 .stop-icon:hover {
   filter: brightness(70%);
 }
+
 @media (max-width: 670px) {
   .controls-container {
     height: 70px;
     border-radius: 25px;
-    width: 90%;
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .slider-container {
-    width: 50%;
-    margin-right: 20px;
+    width: 60%;
+    margin-right: 30px;
   }
 
   .slider-input {
-    height: 32px;
+    height: 40px;
     border-radius: 8px;
   }
 
   .slider-input::-webkit-slider-thumb {
-    width: 42px;
-    height: 42px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .buttons-container button:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .buttons-container button {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .controls-container {
+    height: 70px;
+    border-radius: 25px;
+  }
+
+  .slider-container {
+    width: 50%;
+    margin-right: 25px;
+  }
+
+  .slider-input {
+    height: 35px;
+    border-radius: 8px;
+  }
+
+  .slider-input::-webkit-slider-thumb {
+    width: 45px;
+    height: 45px;
   }
 
   .buttons-container button:not(:last-child) {
@@ -131,17 +171,15 @@ main {
   }
 
   .buttons-container button {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
 }
-
-@media (max-width: 550px) {
+@media (max-width: 570px) {
   .words-container {
     font-size: 8.5rem;
   }
 }
-
 @media (max-width: 480px) {
   .words-container {
     font-size: 6.4rem;
