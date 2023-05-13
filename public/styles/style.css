@@ -8,17 +8,14 @@ html {
   font-family: 'Inter', sans-serif;
 }
 body {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
+  position: relative;
 }
 main {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: 100vh;
-  position: relative;
 }
 .words-container {
   color: #ff0000;
@@ -27,8 +24,8 @@ main {
 }
 .controls-container {
   position: absolute;
-  bottom: 5%;
-  width: 90%;
+  bottom: 10%;
+  width: 100%;
   max-width: 600px;
   height: 90px;
   display: flex;
@@ -103,11 +100,15 @@ main {
 .stop-icon:hover {
   filter: brightness(70%);
 }
-
 @media (max-width: 670px) {
   .controls-container {
     height: 70px;
     border-radius: 25px;
+    width: 90%;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .slider-container {
@@ -134,11 +135,13 @@ main {
     height: 30px;
   }
 }
+
 @media (max-width: 550px) {
   .words-container {
     font-size: 8.5rem;
   }
 }
+
 @media (max-width: 480px) {
   .words-container {
     font-size: 6.4rem;
